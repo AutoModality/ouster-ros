@@ -48,6 +48,9 @@ def generate_launch_description():
         executable='os_driver',
         name=os_driver_name,
         namespace=ouster_ns,
+        remappings=[
+            ('/ouster/points', '/sensor/lidar/pointcloud2'),
+        ],
         parameters=[params_file],
         output='screen',
     )
