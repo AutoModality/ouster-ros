@@ -25,7 +25,7 @@ ouster/os_driver:
     # - TIME_FROM_ROS_TIME: This option uses the time of reception of first
     #                       packet of a LidarScan as the timestamp of the IMU,
     #                       PointCloud2 and LaserScan messages.
-    timestamp_mode: ''
+    timestamp_mode: 'TIME_FROM_ROS_TIME'
     # ptp_utc_tai_offset[optional]: UTC/TAI offset in seconds to apply when
     # TIME_FROM_PTP_1588 timestamp mode is used.
     ptp_utc_tai_offset: -37.0
@@ -48,9 +48,9 @@ ouster/os_driver:
     # assigned.
     imu_port: 7503
     # sensor_frame[optional]: name to use when referring to the sensor frame.
-    sensor_frame: os_sensor
+    sensor_frame: lidar
     # lidar_frame[optional]: name to use when referring to the lidar frame.
-    lidar_frame: lidar
+    lidar_frame: lidar_flipped
     # imu_frame[optional]: name to use when referring to the imu frame.
     imu_frame: os_imu
     # point_cloud_frame[optional]: which frame of reference to use when
